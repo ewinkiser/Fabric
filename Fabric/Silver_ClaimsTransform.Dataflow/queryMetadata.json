@@ -1,0 +1,39 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "Silver_ClaimsTransform",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "carrier_Claims_raw txt": {
+      "queryId": "c55ed071-17e2-46eb-b781-4f5d3e2d9715",
+      "queryName": "carrier_Claims_raw txt",
+      "loadEnabled": false
+    },
+    "carrier_Claims_raw txt (2)": {
+      "queryId": "b1e0b697-efff-4468-8c14-5f958da3848e",
+      "queryName": "carrier_Claims_raw txt (2)"
+    },
+    "carrier_Claims_raw txt_DataDestination": {
+      "queryId": "7c0673b3-d824-4536-9e5b-684a45ae91de",
+      "queryName": "carrier_Claims_raw txt_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "carrier_Claims_raw txt_DataDestinationTransform": {
+      "queryId": "7b74b96c-02c2-454d-b9a2-de5497ae73d2",
+      "queryName": "carrier_Claims_raw txt_DataDestinationTransform",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"3a907f6f-583c-435d-a2a7-7ecaae3cb711\",\"DatasourceId\":\"cb75d6af-8a57-4500-bb88-51b91b9961eb\"}"
+    }
+  ]
+}

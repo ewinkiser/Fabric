@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "Silver_ClaimsTransform"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5df56b82-23fa-b9dc-403f-6b13b5720d40"
+  }
+}
