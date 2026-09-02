@@ -1,0 +1,79 @@
+table claims_gold_summary
+	lineageTag: 904d5970-5960-4983-a556-e65e45007441
+	sourceLineageTag: [dbo].[claims_gold_summary]
+
+	column EmployeeID
+		dataType: string
+		lineageTag: ad844374-f0d0-46cd-a83c-0f3bcbaef18e
+		sourceLineageTag: EmployeeID
+		summarizeBy: none
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BenefitType
+		dataType: string
+		lineageTag: 8f8e9e59-b6e6-4a38-91bb-24e1b8d65221
+		sourceLineageTag: BenefitType
+		summarizeBy: none
+		sourceColumn: BenefitType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoverageTier
+		dataType: string
+		lineageTag: d83e5c9f-da32-45ef-9824-918a5b082942
+		sourceLineageTag: CoverageTier
+		summarizeBy: none
+		sourceColumn: CoverageTier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provider
+		dataType: string
+		lineageTag: da086193-b238-4444-9d3b-3d1b1d0e1e41
+		sourceLineageTag: Provider
+		summarizeBy: none
+		sourceColumn: Provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column record_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 6288db24-1dc7-484d-b988-3134ff842e74
+		sourceLineageTag: record_count
+		summarizeBy: sum
+		sourceColumn: record_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_coverage_amount
+		dataType: double
+		lineageTag: 906b5af3-18a5-4738-bcfd-04960f7c661f
+		sourceLineageTag: total_coverage_amount
+		summarizeBy: sum
+		sourceColumn: total_coverage_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_coverage_amount
+		dataType: double
+		lineageTag: 6fd9ebfa-b626-4373-b5e0-3a919330ca9b
+		sourceLineageTag: avg_coverage_amount
+		summarizeBy: sum
+		sourceColumn: avg_coverage_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition claims_gold_summary = entity
+		mode: directLake
+		source
+			entityName: claims_gold_summary
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_gold_lakehouse'
+

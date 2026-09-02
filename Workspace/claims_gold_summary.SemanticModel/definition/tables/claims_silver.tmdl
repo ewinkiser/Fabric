@@ -1,0 +1,101 @@
+table claims_silver
+	lineageTag: b0c589a5-3e40-40f2-81b8-b12c2c37492b
+	sourceLineageTag: [dbo].[claims_silver]
+
+	column EmployeeID
+		dataType: string
+		lineageTag: 666fd0ac-4bc3-4546-92eb-c21e8fce5c72
+		sourceLineageTag: EmployeeID
+		summarizeBy: none
+		sourceColumn: EmployeeID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BenefitType
+		dataType: string
+		lineageTag: 35151a14-b546-4ecc-8a13-8618baca76ed
+		sourceLineageTag: BenefitType
+		summarizeBy: none
+		sourceColumn: BenefitType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoverageAmount
+		dataType: string
+		lineageTag: 10c357c1-b6ab-4f4b-9e25-937531f8d376
+		sourceLineageTag: CoverageAmount
+		summarizeBy: none
+		sourceColumn: CoverageAmount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: string
+		lineageTag: c1fa120e-d623-4686-9062-b888dbdeb1d0
+		sourceLineageTag: StartDate
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: string
+		lineageTag: a7829190-5a4d-46df-9baa-6ca5323bb7db
+		sourceLineageTag: EndDate
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provider
+		dataType: string
+		lineageTag: 26b260d0-3bbe-4bdf-926b-9a3656fb52ea
+		sourceLineageTag: Provider
+		summarizeBy: none
+		sourceColumn: Provider
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notes
+		dataType: string
+		lineageTag: 359c1210-f9fd-4a33-bd28-bb1a32969026
+		sourceLineageTag: Notes
+		summarizeBy: none
+		sourceColumn: Notes
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoverageTier
+		dataType: string
+		lineageTag: 03404744-d49e-41d6-9638-c7abf5a0f454
+		sourceLineageTag: CoverageTier
+		summarizeBy: none
+		sourceColumn: CoverageTier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition claims_silver = entity
+		mode: directLake
+		source
+			entityName: claims_silver
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_silver_lakehouse'
+
+	changedProperty = IsHidden
+
