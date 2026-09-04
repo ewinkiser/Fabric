@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "lh_silver_lakehouse",
+    "description": "Cleaned, conformed, analytics‑ready Silver layer for medallion architecture."
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9237b99a-0a33-a439-4898-b7de54b78f1e"
+  }
+}
